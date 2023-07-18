@@ -13,7 +13,7 @@ void Cumulants::setCumulants(std::complex <float>* cumulants) {
 }
 std::complex <float> Cumulants::epr(unsigned p, unsigned r, unsigned n, std::complex <float>* sPhase, std::complex <float>* sComp) {
     std::complex <float> result = 0;
-    for (unsigned i = 1; i <= n; i++)
+    for (unsigned i = 0; i < n; i++)
         result += pow(sPhase[i], p) * pow(sComp[i], r);
     result /= n;
     return result;
